@@ -1,0 +1,616 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px; 
+}
+
+.ring,.ring2,.ring3,.ring4,.ring5,.ring6,.ring7,.ring8,.ring9,.ring10,.ring11{
+    border: 1.4px dotted;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    transform-style: preserve-3d; 
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+p{
+    margin-left: 30%;
+}
+
+@keyframes muter {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@keyframes muter2 {
+    from {
+        transform: rotateY(0deg) rotateX(20deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(20deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter3 {
+    from {
+        transform: rotateY(0deg) rotateX(40deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(40deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter4 {
+    from {
+        transform: rotateY(0deg) rotateX(60deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(60deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter5 {
+    from {
+        transform: rotateY(0deg) rotateX(80deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(80deg) rotateZ(0deg);
+    }
+}
+
+/* Add Additional Animations */
+@keyframes muter6 {
+    from {
+        transform: rotateY(0deg) rotateX(100deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(100deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter7 {
+    from {
+        transform: rotateY(0deg) rotateX(360deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter8 {
+    from {
+        transform: rotateY(0deg) rotateX(340deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(340deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter9 {
+    from {
+        transform: rotateY(0deg) rotateX(320deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(320deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter10 {
+    from {
+        transform: rotateY(0deg) rotateX(300deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(300deg) rotateZ(0deg);
+    }
+}
+
+@keyframes muter11 {
+    from {
+        transform: rotateY(0deg) rotateX(280deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(280deg) rotateZ(0deg);
+    }
+}
+
+/* Ring Styles with Animation */
+.ring1 {
+    border-color: #e74c3c;
+    animation: muter 6.66s linear infinite;
+}
+
+.ring2 {
+    border-color: #3498db;
+    animation: muter2 6.66s linear infinite;
+}
+
+.ring3 {
+    border-color: #2ecc71;
+    animation: muter3 6.66s linear infinite;
+}
+
+.ring4 {
+    border-color: #f39c12;
+    animation: muter4 6.66s linear infinite;
+}
+
+.ring5 {
+    border-color: #9b59b6;
+    animation: muter5 6.66s linear infinite;
+}
+
+.ring6 {
+    border-color: #1abc9c;
+    animation: muter6 6.66s linear infinite;
+}
+
+.ring7 {
+    border-color: #e67e22;
+    animation: muter7 6.66s linear infinite;
+}
+
+.ring8 {
+    border-color: #34495e;
+    animation: muter8 6.66s linear infinite;
+}
+
+.ring9 {
+    border-color: #f1c40f;
+    animation: muter9 6.66s linear infinite;
+}
+
+.ring10 {
+    border-color: #7f8c8d;
+    animation: muter10 6.66s linear infinite;
+}
+
+.ring11 {
+    border-color: #23a2ab;
+    animation: muter11 6.66s linear infinite;
+}
+
+/* Ring Positioning */
+.ring1 { transform: rotateZ(0deg); }
+.ring2 { transform: rotateZ(36deg); }
+.ring3 { transform: rotateZ(72deg); }
+.ring4 { transform: rotateZ(108deg); }
+.ring5 { transform: rotateZ(144deg); }
+.ring6 { transform: rotateZ(180deg); }
+.ring7 { transform: rotateZ(216deg); }
+.ring8 { transform: rotateZ(252deg); }
+.ring9 { transform: rotateZ(288deg); }
+.ring10 { transform: rotateZ(324deg); }
+.ring11 { transform: rotateZ(360deg); }
+
+/* Interaction Styles */
+.ring:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+    transform: scale(1.2) rotateX(0deg) rotateY(0deg); /* Zoom effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.ring:focus {
+    outline: 2px solid #fff; /* Focus outline */
+    outline-offset: 4px;
+}
+
+.container2{
+    width: 100px;
+    height: 100px;
+    perspective: 1000px; 
+    position: relative;
+}
+
+.ring12,.ring13,.ring14,.ring15,.ring16,.ring17,.ring18,.ring19,.ring20,.ring21{
+    border: 1px dotted;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    transform-style: preserve-3d; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ring12{
+    transform: rotateZ(0deg);
+    animation: muter12 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter12{
+    from{
+        transform: rotateY(0deg) rotateX(0deg);
+    }to{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.ring13{
+    transform: rotateZ(36deg);
+    animation: muter13 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter13{
+    from{
+        transform: rotateY(0deg) rotateX(20deg);
+    }to{
+        transform: rotateY(360deg) rotateX(20deg);
+    }
+}
+
+.ring14{
+    transform: rotateZ(72deg);
+    animation: muter14 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter14{
+    from{
+        transform: rotateY(0deg) rotateX(40deg);
+    }to{
+        transform: rotateY(360deg) rotateX(40deg);
+    }
+}
+
+.ring15{
+    transform: rotateZ(108deg);
+    animation: muter15 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter15{
+    from{
+        transform: rotateY(0deg) rotateX(60deg);
+    }to{
+        transform: rotateY(360deg) rotateX(60deg);
+    }
+}
+
+.ring16{
+    transform: rotateZ(144deg);
+    animation: muter16 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter16{
+    from{
+        transform: rotateY(0deg) rotateX(80deg);
+    }to{
+        transform: rotateY(360deg) rotateX(80deg);
+    }
+}
+
+.ring17{
+    transform: rotateZ(180deg);
+    animation: muter17 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter17{
+    from{
+        transform: rotateY(0deg) rotateX(360deg);
+    }to{
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.ring18{
+    transform: rotateZ(216deg);
+    animation: muter18 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter18{
+    from{
+        transform: rotateY(0deg) rotateX(340deg);
+    }to{
+        transform: rotateY(360deg) rotateX(340deg);
+    }
+}
+
+.ring18{
+    transform: rotateZ(252deg);
+    animation: muter18 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter18{
+    from{
+        transform: rotateY(0deg) rotateX(320deg);
+    }to{
+        transform: rotateY(360deg) rotateX(320deg);
+    }
+}
+
+.ring19{
+    transform: rotateZ(288deg);
+    animation: muter19 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter19{
+    from{
+        transform: rotateY(0deg) rotateX(300deg);
+    }to{
+        transform: rotateY(360deg) rotateX(300deg);
+    }
+}
+
+.ring20{
+    transform: rotateZ(324deg);
+    animation: muter20 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter20{
+    from{
+        transform: rotateY(0deg) rotateX(280deg);
+    }to{
+        transform: rotateY(360deg) rotateX(280deg);
+    }
+}
+
+.ring21{
+    transform: rotateZ(360deg);
+    animation: muter21 6.66s linear infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes muter21{
+    from{
+        transform: rotateY(0deg) rotateX(260deg);
+    }to{
+        transform: rotateY(360deg) rotateX(260deg);
+    }
+}
+
+.container3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.ringring, .ringring3,.ringring4,.ringring5,.ringring6,.ringring7{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.ringring {
+    animation: ringring 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes ringring {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.ringring3 {
+    animation: ringring3 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes ringring3 {
+    from {
+        transform: rotateY(0deg) rotateX(40deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(40deg);
+    }
+}
+
+.ringring4 {
+    animation: ringring4 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes ringring4 {
+    from {
+        transform: rotateY(0deg) rotateX(-40deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(-40deg);
+    }
+}
+
+.ringring5 {
+    animation: ringring5 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes ringring5 {
+    from {
+        transform: rotateY(0deg) rotateX(120deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(120deg);
+    }
+}
+
+.ringring6 {
+    animation: ringring6 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes ringring6 {
+    from {
+        transform: rotateY(0deg) rotateX(-120deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(-120deg);
+    }
+}
+
+.ringring7 {
+    animation: ringring7 6.66s linear infinite;
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes ringring7 {
+    from {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+        transform: rotateY(360deg) rotateX(0deg);
+    }
+}
+
+.muteran{
+    width: 100%;
+    gap: 1rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container4{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+}
+
+.container4 .ring1, 
+.container4 .ring2, 
+.container4 .ring3, 
+.container4 .ring4, 
+.container4 .ring5, 
+.container4 .ring6, 
+.container4 .ring7, 
+.container4 .ring8, 
+.container4 .ring9, 
+.container4 .ring10, 
+.container4 .ring11 {
+    border: 1px solid; /* Gaya khusus di container4 */
+}
+
+.container4 .ring2{
+    border-color: #1abc9c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container4 .ring3{
+    border-color: #23a2ab;
+}
+
+.container4 .ring3{
+    border-color: #34495e;
+}
+
+.container4 .ring4{
+    border-color: #3498db;
+}
+
+.container4 .ring5{
+    border-color: #e67e22;
+}
+
+.container4 .ring6{
+    border-color: #7f8c8d;
+}
+
+.container4 .ring7{
+    border-color: #f39c12;
+}
+
+.container4 .ring8{
+    border-color: #9b59b6;
+}
+
+.container4 .ring9{
+    border-color: #e74c3c;
+}
+
+.container4 .ring10{
+    border-color: #2ecc71;
+}
+
+.container4 .ring11{
+    border-color: #f1c40f;
+}
+
+@media (max-width: 728px){
+    .muteran{
+        flex-direction: column;
+    }
+}
